@@ -7,11 +7,11 @@ export class Funcionario {
         this._bonificacao = 1;
         this._senha;
     }
-    /* dessa forma ninguem pode atribuir um valor a senha, 
-    sendo necessario chamar o metodo cadastrarSenha*/
-    get senha() {
-        return this._senha;
+
+    autenticar(senha) {
+        return senha == this._senha;
     }
+
     cadastrarSenha(senha) {
         this._senha = senha;
     }
